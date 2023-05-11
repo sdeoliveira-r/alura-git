@@ -8,5 +8,7 @@ git config --local user.email "sdeoliveira.r@gmail.com"
 
 git init
 git status
+git add .
+git commit -m "First base commit"
 
 
