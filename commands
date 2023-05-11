@@ -11,4 +11,54 @@ git status
 git add .
 git commit -m "First base commit"
 
+< https://devhints.io/git-log >
+git log
+git config --local user.name "Rafael de O Santos"
+git log --oneline
+git log -p
+
+git log --pretty="format:%H"
+git log --pretty="format:%h %s"
+
+git add .gitignore
+git commit -m "Adicionando .gitignore"
+git log --pretty="format:%h %s %ae"
+
+==========================Criando Repositórios Remotos==============================
+cd ..
+mkdir 4_servidor_local
+git init --bare
+cd ../4_git-github
+git remote add repositorio-local /home/rafael/Documentos/4_servidor_local/
+git remote
+git remote -v (buscar local para fetch e push)
+
+cd ..
+cd mkdir usuario1
+cd usuario1
+git clone /home/rafael/Documentos/4_servidor_local/ folder.usuario1
+
+cd ../4_git-github/
+git push repositorio-local master
+
+============ Sicronizando os dados ============
+cd ../usuario1/folder.usuario1
+git remote
+git remote rename origin 4_servidor_local
+git pull 4_servidor_local master
+
+========= usuario1 fazendo modificações =========
+Depois de fazer modificações no index.html ... 
+git status
+git add index.html
+git commit -m "Renomeando curso de Integração Contínua"
+git remote
+git push 4_servidor_local master
+
+
+
+
+
+
+
 
