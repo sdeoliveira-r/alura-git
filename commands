@@ -1,0 +1,12 @@
+ls
+cd 'Área de Trabalho'
+cd 4_git-github
+ls
+
+git config --local user.name "Rafael"
+git config --local user.email "sdeoliveira.r@gmail.com"
+
+git init
+git status
+
+
