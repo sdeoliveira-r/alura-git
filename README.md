@@ -62,7 +62,7 @@ git commit -m "Modificações realizadas"
 git remote
 git push 4_servidor_local main
 ```
-#### ======================= Trazer alterações feitas pelo usuario1 que estão no repositório-local =======================
+#### ======================= Trazer alterações que estão no repositório-local =======================
 ```
 git pull repositorio-local main
 ```
@@ -154,7 +154,7 @@ git merge section (Execute o comando git merge section p/ trazer o trabalho feit
 git pull repositorio-local main (trazer dados do repositório local)
 git push repositorio-local main (depois, enviar alterações p/ o repositório repositorio-local)
 ```
-#### ======================= Checkpoint (tag) em uma release e/ou em uma versão =======================
+#### ===================== Checkpoint (tag) em uma release e/ou em uma versão =====================
 ```
 git tag -a v0.1.0 -m "Primeira versão (BETA) da aplicação"
 git tag
