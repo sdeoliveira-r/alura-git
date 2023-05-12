@@ -1,54 +1,53 @@
-======================= Início =======================
-cd 4_git-github
-
-git config --local user.name "Seu_Nome"
-git config --local user.email "Seu_Email"
-
-git init
-git status
+======================= Início ======================= 
+cd 4_git-github 
+git config --local user.name "Seu_Nome" 
+git config --local user.email "Seu_Email" 
+git init 
+git status 
 git add .
-git commit -m "First base commit"
+git commit -m "First base commit" 
 
-======================= Git log (Registros) <https://devhints.io/git-log> =======================
-git log
-git config --local user.name "Rafael"
-git log --oneline
-git log -p
+======================= Git log (Registros) ======================= 
+Mais informações  <https://devhints.io/git-log> 
+git log 
+git config --local user.name "Rafael" 
+git log --oneline 
+git log -p 
 
-git log --pretty="format:%H"
-git log --pretty="format:%h %s"
+git log --pretty="format:%H" 
+git log --pretty="format:%h %s" 
 
-git add .gitignore
-git commit -m "Adicionando .gitignore"
-git log --pretty="format:%h %s %ae"
+git add .gitignore 
+git commit -m "Adicionando .gitignore" 
+git log --pretty="format:%h %s %ae" 
 
-======================= Criando Repositório Local =======================
-cd ..
-mkdir 4_servidor_local
-git init --bare
-cd ../4_git-github
-git remote add repositorio-local /home/rafael/Documentos/4_servidor_local/
-git remote
-git remote -v (buscar local para fetch e push)
+======================= Criando Repositório Local ======================= 
+cd .. 
+mkdir 4_servidor_local 
+git init --bare 
+cd ../4_git-github 
+git remote add repositorio-local /home/rafael/Documentos/4_servidor_local/ 
+git remote 
+git remote -v (buscar local para fetch e push) 
 
-======================= Criando usuario1 e clonando projeto =======================
-cd ..
-cd mkdir usuario1
-cd usuario1
-git clone /home/rafael/Documentos/4_servidor_local/ folder.usuario1
+======================= Criando usuario1 e clonando projeto ======================= 
+cd .. 
+cd mkdir usuario1 
+cd usuario1 
+git clone /home/rafael/Documentos/4_servidor_local/ folder.usuario1 
 
-======================= Enviar projeto p/ repositorio-local =======================
-cd ../4_git-github/
-git push repositorio-local main
+======================= Enviar projeto p/ repositorio-local ======================= 
+cd ../4_git-github/ 
+git push repositorio-local main 
 
-======================= Renomear e sicronizar dados no rep. local =======================
-cd ../usuario1/folder.usuario1
-git remote
+======================= Renomear e sicronizar dados no rep. local ======================= 
+cd ../usuario1/folder.usuario1 
+git remote 
 git remote rename origin servidor_local 
-git remote rename servidor_local repositorio-local
-git pull repositorio-local main
+git remote rename servidor_local repositorio-local 
+git pull repositorio-local main 
 
-======================= Usuário1 fazendo alterações =======================
+======================= Usuário1 fazendo alterações ======================= 
 Depois de fazer modificações no index.html ... 
 git status
 git add index.html
@@ -56,49 +55,49 @@ git commit -m "Modificações realizadas"
 git remote
 git push 4_servidor_local main
 
-======================= Trazer alterações feitas pelo usuario1 que estão no repositório-local =======================
-git pull repositorio-local main
+======================= Trazer alterações feitas pelo usuario1 que estão no repositório-local ======================= 
+git pull repositorio-local main 
 
-======================= Enviar para o Github =======================
+======================= Enviar para o Github ======================= 
 Criar um novo repositório ... 
 git remote add origin https://github.com/sdeoliveira-r/alura-git.git
 git push origin main
 
-======================= Git Branch(Ramos) =======================
+======================= Git Branch(Ramos) ======================= 
 git branch 
 git branch header (criar a branch header)
 git checkout header (ir para branch header)
 git checkout -b section (criar branch section e ir para branch section)
 
-======================= Atribuir nome de usuário p/ uma branch =======================
+======================= Atribuir nome de usuário p/ uma branch ======================= 
 cd /home/rafael/Documentos/usuario1/folder.usuario1/
 git checkout main
 git config --local user.name "usuario1"
 
-======================= Desfazer modificações =======================
+======================= Desfazer modificações ======================= 
 git checkout -- <file> (desfazemos uma alteração que ainda não foi adicionada, ou seja, antes do git add .)
 git reset HEAD <file> (desfazemos uma alteração depois do git add .)
 git revert <hash commit number> (desfazemos uma alteração depois do git commit)
 
-======================= Salvar alterações p/ retomar posteriormente =======================
+======================= Salvar alterações p/ retomar posteriormente ======================= 
 git stash
 git stash list (lista stash)
 git stash apply number << stash@{number} >>
 git stash drop (remove a stash)
 git stash pop (traz e remove a stash)
 
-=======================* Viajando no tempo *=======================
+=======================* Viajando no tempo *======================= 
 git log --oneline
 git checkout <commit number hash>
 git checkout main (voltar à linha principal de desenvolvimento)
 
-======================= Git diff exibir todas as mudançãs entre um commit e qualquer outro =======================
+======================= Git diff exibir todas as mudançãs entre um commit e qualquer outro ======================= 
 git diff
-git diff hash_commit_inicial..hash_commit_final
+git diff hash_commit_inicial..hash_commit_final 
 
 *** É possível comparar as alterações entre duas branches com git diff <branch1>..<branch2> ***
 
-======================= Git merge =======================
+======================= Git merge ======================= 
 cd ..
 cd usuario1
 cd folder.usuario1
@@ -109,7 +108,7 @@ git merge section (trazer as alterações da branch section p/ branch main)
 
 *** O merge junta os trabalhos e gera um merge commit. ***
 
-======================= Git rebase =======================
+======================= Git rebase ======================= 
 (Traz os commits de uma branch p/ outra; o git rebase não gera commit de merge, isso simplifica os logs)
 cd ..
 cd .. 4_git-github
