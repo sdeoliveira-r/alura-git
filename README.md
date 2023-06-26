@@ -175,6 +175,6 @@ Em url na seção de origem, adicione o repository correto, exemplo:
 
 Caso seja necessário adicione seu Personal Token, exemplo:
 [remote "origin"]
-	url = https://<username>:<personalToken>@github.com/username/name-repository.git
+	url = https://<personalToken>@github.com/username/name-repository.git
 ```
 
