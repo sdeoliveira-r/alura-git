@@ -164,3 +164,17 @@ git remote -v
 git push origin main (enviando p/ o github)
 git push origin v0.1.0 (enviando tag v0.1.0 p/ o github)
 ```
+#### ===================== Repositório não encontrado (apenas no VSCode) =====================
+```
+cd /path/to/your/repo
+nano .git/config
+
+Em url na seção de origem, adicione o repository correto, exemplo:
+[remote "origin"]
+	url = https://github.com/username/name-repository.git
+
+Caso seja necessário adicione seu Personal Token, exemplo:
+[remote "origin"]
+	url = https://<username>:<personalToken>@github.com/username/name-repository.git
+```
+
